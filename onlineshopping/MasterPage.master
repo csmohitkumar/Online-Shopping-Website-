@@ -1,0 +1,244 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+     <link href="themes/4/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="themes/4/js-image-slider.js" type="text/javascript"></script>
+    <link href="generic.css" rel="stylesheet" type="text/css" />
+    <link href="Header.css" rel="Stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1024px;
+            margin-top: -15px;
+        }
+        .style2
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            height: 26px;
+        }
+    </style>
+    </head>
+<body background="Image/background.jpeg">
+    <form id="form1" runat="server">
+    <div>
+        <table class="style1" border="0" align="center" width="1020">
+            <tr>
+                <td>
+                    <div>
+                        <table class="style2" width="300">
+                            <tr valign="top">
+                                <td align="left" class="style3">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="#" style=" text-decoration: none">Contact Us</asp:HyperLink>
+                                    &nbsp; </td>
+                                <td class="style3" align="left">
+                                                                        &nbsp;&nbsp; &nbsp;&nbsp;
+                                </td>
+                                <td class="style3">
+                                    <asp:Label ID="lbllike" runat="server" Visible="False" BorderStyle="None" 
+                                        Font-Italic="True" Font-Names="Algerian">Like Us: </asp:Label>
+                                        
+                                        
+                                </td>
+                                <td class="style3">
+                                    <a href="https://twitter.com/" target="_blank"><img src="Image/twitter.jpg"  width="30" height="30" title="Twitter"></a></td>
+                                <td class="style3">
+<a href="https://plus.google.com/â€Ž" target="_blank"><img src="Image/google+.jpg" width="30" height="30" title="Google+"></a></td>
+                                <td class="style3">
+                                    <a href="http://www.youtube.com/" target="_blank"><img src="Image/youtube.jpg" width="30" height="30" title="youtube"></a></td>
+                                <td class="style3">
+                                        
+                                        
+                                    <a href="https://www.facebook.com/" target="_blank"><img src="Image/facebook1.jpg" width="30" height="30" title="Facebook"></a></td>
+                                <td align="center" class="style3">
+                                    <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Vijaya" 
+                                        ForeColor="#660033" Text="WELCOME :   "></asp:Label>
+                                    <asp:Label ID="lblUserNameWelcome" runat="server" Text=""></asp:Label>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="left">
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td align="left">
+&nbsp;
+                                    
+&nbsp;&nbsp;<a href="Login.aspx" target="_self" style="text-decoration:none"><asp:Label ID="lblsignIn" 
+                                        style="text-decoration:none" runat="server"
+    Text="Sign In" Font-Names="Vijaya" Font-Size="14pt" ForeColor="Maroon"></asp:Label></a>&nbsp;&nbsp; <a href="User_Registration.aspx" target="_self"><asp:Label ID="lblRegister" Font-Names="Vijaya" Font-Size="14pt" ForeColor="Maroon" runat="server"
+    Text="Sign Up" style="text-decoration:none"></asp:Label></a>&nbsp;&nbsp;
+    
+    <a href="User_home.aspx" target="_self" style="text-decoration:none"><asp:Label ID="lblLogout" style="text-decoration:none" Font-Names="Vijaya" Font-Size="14pt" ForeColor="Maroon" runat="server"
+    Text="Log Out"></asp:Label>
+                                    </a>&nbsp;&nbsp;
+                                    </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="style2">
+                            <tr valign="top">
+                                <td width="200">
+                                    <asp:Image ID="Image1" runat="server" Height="47px" ImageUrl="~/Image/home/nov2 copy.jpg1.jpg" 
+                                        Width="200px" />
+                                </td>
+                                <td width="600" align="center">
+                                    &nbsp;</td>
+                                <td align="right">
+                                    <a href="User_Cart.aspx" ><asp:Image ID="Image3" runat="server" Height="54px" Width="53px" 
+                                        ImageUrl="~/Image/cart.png" /></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <center>
+                <table>
+                <tr>
+                <td>
+                    <asp:Panel ID="admin_panel" runat="server">
+                        <asp:Menu ID="menu_Admin" runat="server" BackColor="#B5C7DE" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                        ForeColor="#284E98" Orientation="Horizontal" 
+    StaticSubMenuIndent="10px" Width="1000px">
+                            <StaticSelectedStyle BackColor="#507CD1" />
+                            <StaticMenuItemStyle HorizontalPadding="15px" 
+                            VerticalPadding="2px" BackColor="White" Font-Bold="True" 
+                            Font-Names="Tahoma" Font-Size="15pt" ForeColor="#003366" />
+                            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <DynamicMenuStyle BackColor="#B5C7DE" />
+                            <DynamicSelectedStyle BackColor="#507CD1" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticHoverStyle BackColor="#003366" ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/User_home.aspx" Text="Home" ToolTip="Home" 
+                                    Value="Home"></asp:MenuItem>
+                                <asp:MenuItem Text="Add Product" Value="Add Product" 
+                                    NavigateUrl="~/Admin/Admin_add2.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Search Product" Value="Search Product" 
+                                    NavigateUrl="~/Admin/AdminSearch.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Manage product" Value="Manage product" 
+                                    NavigateUrl="~/Admin/Admin_Delete_inventory.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Admin Registration" Value="Admin Registration" 
+                                    NavigateUrl="~/Admin/Admin_Registration.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Reports" Value="Reports">
+                                    <asp:MenuItem NavigateUrl="~/Admin/Customer_Detail.aspx" Text="User Detail" 
+                                        Value="User Detail"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Admin/Customer_report.aspx" 
+                                        Text="Inventory Details" ToolTip="Inventory Details" Value="Inventory Details">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Admin/Admin_purchase_history.aspx" 
+                                        Text="Purchase Report" Value="Purchase Report"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:Panel>
+                    <asp:Panel ID="Customer_panal" runat="server">
+                        <asp:Menu ID="menu_Customer" runat="server" BackColor="#B5C7DE" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                        ForeColor="#284E98" Orientation="Horizontal" 
+    StaticSubMenuIndent="10px" Width="1000px">
+                            <StaticSelectedStyle BackColor="#507CD1" />
+                            <StaticMenuItemStyle HorizontalPadding="15px" 
+                            VerticalPadding="2px" BackColor="White" Font-Bold="True" 
+                            Font-Names="Tahoma" Font-Size="15pt" ForeColor="#003366" />
+                            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <DynamicMenuStyle BackColor="#B5C7DE" />
+                            <DynamicSelectedStyle BackColor="#507CD1" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticHoverStyle BackColor="#003366" ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/User_home.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Comopare Product" Value="Comopare Product" 
+                                    NavigateUrl="~/Compare_Mobile.aspx" ToolTip="Comopare Product"></asp:MenuItem>
+                                <asp:MenuItem Text="Cart" Value="Cart" NavigateUrl="~/User_Cart.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="User profile" Value="User profile">
+                                    <asp:MenuItem NavigateUrl="~/Update_user_profile.aspx" Text="Update profile" 
+                                        Value="Update profile"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/User_Reset_Password.aspx" Text="Reset Password" 
+                                        Value="Reset Password"></asp:MenuItem>
+                                    <asp:MenuItem Text="History" Value="History" 
+                                        NavigateUrl="~/User_purchase_history.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Adout us" Value="New Item"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:Panel>
+                
+                </td>
+                </tr>
+                </table>
+                </center>
+                </td>
+            </tr>
+            <tr><td>
+            
+                <div id="sliderFrame">
+                    <div id="slider">
+                        <img src="images/slider-1.jpg" />
+                        <img src="images/slider-2.jpg" />
+                        <img src="images/slider-3.jpg" />
+                        <img src="images/slider-4.jpg" />
+                    </div>
+                    <!--Custom navigation buttons on both sides-->
+                    <div class="group1-Wrapper">
+                        <a onclick="imageSlider.previous()" class="group1-Prev"></a><a onclick="imageSlider.next()"
+                            class="group1-Next"></a>
+                    </div>
+                    <!--nav bar-->
+                    <div style="text-align: center; padding: 20px; z-index: 20;">
+                        <a onclick="imageSlider.previous()" class="group2-Prev"></a><a id='auto' onclick="switchAutoAdvance()">
+                        </a><a onclick="imageSlider.next()" class="group2-Next"></a>
+                    </div>
+                </div>
+            </td></tr>
+            <tr>
+                <td>
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+                </td>
+            </tr>
+            <tr>
+                <td class="divwidth">
+	
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div align="right" style="float: left; line-height: 30px; font-size: 14px;">
+                        Copyright © The World Mobilize powered by sunLifeStyle</div>
+                </td>
+            </tr>
+        </table>  
+    
+    </div>
+    </form>
+</body>
+</html>
